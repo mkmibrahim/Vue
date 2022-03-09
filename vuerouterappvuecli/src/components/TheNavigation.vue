@@ -11,6 +11,16 @@
     >
       {{ destination.name }}
     </router-link>
+    <router-link
+      v-for="destination in destinations"
+      :key="destination.id"
+      :to="{
+        name: 'destination2.show',
+        params: { id: destination.id, slug: destination.slug },
+      }"
+    >
+      {{ destination.name }}
+    </router-link>
   </div>
 </template>
 <script>
