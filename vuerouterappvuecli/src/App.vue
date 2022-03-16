@@ -2,7 +2,7 @@
   <TheNavigation />
   <div class="container">
     <router-view v-slot="{ Component }">
-      <transition name="fade" mode="out-in">
+      <transition name="slide" mode="out-in">
         <component :is="Component" :key="$route.path"></component>
       </transition>
     </router-view>
